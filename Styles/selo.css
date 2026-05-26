@@ -1,0 +1,143 @@
+
+.puzzle-description {
+    margin-top: 10px;
+    color: var(--muted);
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 680px;
+}
+
+/* Upload */
+.upload-section h3,
+.seal-position-control label,
+.preview-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-btn {
+    padding: 11px 24px;
+    background-color: var(--panel);
+    color: var(--panel-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.upload-btn:hover { background-color: var(--button-hover); }
+
+.info-message {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.position-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.position-btn {
+    padding: 9px 16px;
+    background-color: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--text);
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.position-btn:hover  { border-color: var(--button-hover); }
+.position-btn.active { background-color: var(--button-active); color: #fff; border-color: var(--button-active); }
+
+/* Canvas */
+#canvas-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    display: inline-block;
+}
+
+#previewCanvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botões de ação */
+.controls-section {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.download-btn {
+    padding: 12px 24px;
+    background-color: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.download-btn:hover { background-color: #15803d; transform: translateY(-1px); }
+
+.reset-btn {
+    padding: 12px 24px;
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.reset-btn:hover { background-color: var(--header-hover); }
+
+.hidden { display: none !important; }
+
+body.dark-mode .upload-btn    { background-color: #334155; }
+body.dark-mode .position-btn  { background-color: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .reset-btn     { background-color: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark-mode #canvas-container { border-color: #334155; }

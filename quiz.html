@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Desbravapp</title>
+    <link rel="stylesheet" href="Styles/base.css">
+    <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="Styles/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <a class="nav-button" href="Index.html">Início</a>
+                <a class="nav-button active" href="Jogos_Lúdicos.html">Jogos Lúdicos</a>
+                <a class="nav-button" href="Selo.html">Pontos Atuais</a>
+                <a class="nav-button" href="contato.html">Fale conosco</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="main-header">
+                <div>
+                    <h1>Quiz Desbravador</h1>
+                    <p>Teste seus conhecimentos sobre os pontos turísticos e a cultura de Batalha e do Piauí.</p>
+                    <p>Cada acerto vale pontos que são somados ao placar global!</p>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" type="button">Dark Mode</button>
+            </div>
+
+            <div class="quiz-wrapper">
+
+                <!-- Tela do Quiz -->
+                <div id="quiz-screen">
+                    <div class="progress-wrap">
+                        <div class="progress-info">
+                            <span id="prog-current">Pergunta 1 de 10</span>
+                            <span id="prog-pts">0 pts</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="prog-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-card">
+                        <p class="quiz-question" id="quiz-question"></p>
+                        <div class="quiz-options" id="quiz-options"></div>
+                        <p class="quiz-feedback" id="quiz-feedback"></p>
+                        <button class="tema quiz-next" id="quiz-next" type="button">Próxima →</button>
+                    </div>
+                </div>
+
+                <!-- Tela de Resultado -->
+                <div id="result-screen" style="display: none;"></div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="quiz.js"></script>
+    <script src="tema.js"></script>
+</body>
+</html>

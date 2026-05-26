@@ -1,0 +1,67 @@
+
+.termo {
+    display: grid;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.termo-row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.termo-cell {
+    min-height: 60px;
+    border-radius: 12px;
+    border: 2px solid #d1d5db;
+    background-color: var(--surface);
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.termo-cell.correct { background-color: #16a34a; border-color: #16a34a; color: #fff; }
+.termo-cell.present { background-color: #f5f50b; border-color: #ffa200; color: #fff; }
+.termo-cell.wrong   { background-color: #475569; border-color: #475569; color: #fff; }
+
+.controles-termo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.termo-input {
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    width: 220px;
+    background-color: var(--surface);
+    color: var(--text);
+    font-family: inherit;
+}
+
+.termo-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+}
+
+
+.Termo-status {
+    margin-top: 18px;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body.dark-mode .termo-input        { background-color: #0f172a; color: #e2e8f0; border-color: #334155; }
+body.dark-mode .termo-cell         { background-color: #111827; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .termo-cell.correct { background-color: #22c55e; }
+body.dark-mode .termo-cell.present { background-color: #fbbf24; }

@@ -1,0 +1,77 @@
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: var(--header-bg);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+.accordion-header:hover    { background-color: var(--header-hover); }
+
+.accordion-title           { flex: 1; text-align: left; }
+
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    color: #3498db;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p   { padding: 20px; color: #555; line-height: 1.6; }
+.accordion-content img { display: block; max-width: 100%; height: auto; margin: 16px 0; border-radius: 8px; }
+.accordion-content .conteudo-local {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 20px;
+}
+
+.accordion-content .conteudo-local img {
+    width: 340px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.accordion-content .conteudo-local p {
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-item.active .accordion-header   { background-color: #e3f2fd; }
+.accordion-item.active .accordion-icon     { transform: rotate(45deg); }
+.accordion-item.active .accordion-content  { max-height: 500px; }
+
+
+body.dark-mode .accordion-item                        { background-color: #1f2937; border-color: #334155; box-shadow: 0 2px 12px rgba(0,0,0,0.25); }
+body.dark-mode .accordion-header                      { background-color: #111827; color: #e2e8f0; }
+body.dark-mode .accordion-header:hover                { background-color: #0f172a; }
+body.dark-mode .accordion-content p                   { color: #cbd5e1; }
+body.dark-mode .accordion-item.active .accordion-header { background-color: #12b328; }

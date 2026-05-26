@@ -1,0 +1,192 @@
+
+.quiz-wrapper {
+    max-width: 640px;
+}
+
+.progress-wrap {
+    margin-bottom: 24px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.progress-track {
+    height: 8px;
+    background-color: var(--card-border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--panel-alt);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+.quiz-card {
+    background-color: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 30px var(--card-shadow);
+}
+
+.quiz-question {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opt-btn {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: var(--bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    font-family: inherit;
+}
+
+.opt-btn:hover:not(:disabled) {
+    background-color: var(--header-hover);
+    border-color: var(--panel-alt);
+    transform: translateX(4px);
+}
+
+.opt-btn:disabled {
+    cursor: default;
+}
+
+.opt-letter {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--header-bg);
+    border: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+    color: var(--text);
+    transition: background-color 0.2s;
+}
+
+.opt-btn.correct {
+    background-color: #d1fae5;
+    border-color: #16a34a;
+    color: #14532d;
+}
+
+.opt-btn.correct .opt-letter {
+    background-color: #16a34a;
+    color: #fff;
+    border-color: #16a34a;
+}
+
+.opt-btn.wrong {
+    background-color: #fee2e2;
+    border-color: #dc2626;
+    color: #7f1d1d;
+}
+
+.opt-btn.wrong .opt-letter {
+    background-color: #dc2626;
+    color: #fff;
+    border-color: #dc2626;
+}
+
+.quiz-feedback {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 20px;
+    color: var(--muted);
+}
+
+.quiz-next {
+    margin-top: 20px;
+    display: none;
+}
+
+.result-card {
+    background-color: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 48px 32px;
+    box-shadow: 0 8px 30px var(--card-shadow);
+    text-align: center;
+    max-width: 480px;
+}
+
+.result-score-num {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--panel-alt);
+    line-height: 1;
+}
+
+.result-score-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.result-msg {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.result-points-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--header-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    font-size: 14px;
+    color: var(--panel);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.result-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body.dark-mode .quiz-card        { background-color: #1f2937; border-color: #334155; }
+body.dark-mode .opt-btn          { background-color: #111827; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .opt-btn:hover:not(:disabled) { background-color: #163d20; border-color: #4a9463; }
+body.dark-mode .opt-letter       { background-color: #1f2937; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .opt-btn.correct  { background-color: #14532d; border-color: #22c55e; color: #d1fae5; }
+body.dark-mode .opt-btn.wrong    { background-color: #7f1d1d; border-color: #ef4444; color: #fee2e2; }
+body.dark-mode .result-card      { background-color: #1f2937; border-color: #334155; }
+body.dark-mode .result-points-badge { background-color: #0a1a10; border-color: #1e4d2a; color: #a8d5b5; }
+body.dark-mode .progress-track   { background-color: #334155; }
