@@ -68,8 +68,6 @@ function renderPreview() {
     if (!uploadedImage || !sealImage) return;
 
     const ctx = previewCanvas.getContext('2d');
-    
-    // Set canvas size to match image aspect ratio
     const maxWidth = 600;
     const maxHeight = 600;
     let width = uploadedImage.width;
@@ -90,7 +88,6 @@ function renderPreview() {
     // Draw image
     ctx.drawImage(uploadedImage, 0, 0, width, height);
     
-    // Calculate seal size (10% of image width, maintaining aspect ratio)
     const sealWidth = width * 0.15;
     const sealHeight = (sealImage.height * sealWidth) / sealImage.width;
     

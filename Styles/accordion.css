@@ -69,9 +69,33 @@
 .accordion-item.active .accordion-icon     { transform: rotate(45deg); }
 .accordion-item.active .accordion-content  { max-height: 500px; }
 
+.btn-maps {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 10px 20px;
+    background-color: #1a5c35
+    color: #ffffff;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-maps:hover {
+    background-color: #1a5c35;
+    transform: translateY(-2px);
+}
+body.dark-mode .btn-maps {
+    background-color: #1a5c35;
+    color: #ffffff;
+}
 
 body.dark-mode .accordion-item                        { background-color: #1f2937; border-color: #334155; box-shadow: 0 2px 12px rgba(0,0,0,0.25); }
 body.dark-mode .accordion-header                      { background-color: #111827; color: #e2e8f0; }
 body.dark-mode .accordion-header:hover                { background-color: #0f172a; }
 body.dark-mode .accordion-content p                   { color: #cbd5e1; }
 body.dark-mode .accordion-item.active .accordion-header { background-color: #12b328; }
+
