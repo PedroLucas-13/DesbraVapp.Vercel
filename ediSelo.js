@@ -50,7 +50,7 @@ function loadSealImage() {
     img.onerror = () => {
         console.error('Failed to load seal image');
     };
-    img.src = 'img/SELO.png';
+    img.src = 'Img/SELO.png';
 }
 
 // Position button handlers
